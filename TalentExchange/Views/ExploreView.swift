@@ -20,6 +20,7 @@ struct ExploreView: View {
                 router.changes(to: .home)
             } label: {
                 Text("Home로 가기")
+         테스트줄입니다_by ground
             }
         */
         
