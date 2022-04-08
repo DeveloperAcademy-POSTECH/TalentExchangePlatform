@@ -17,12 +17,9 @@ struct OnlineUsersView: View {
                 HStack(spacing:25){
                     ForEach(users, id: \.self) { user in
                         VStack{
-                            Image("\(user)")
-                                .resizable()
-                                .background( Color("color_bg").opacity(0.1))
-                                .frame(width: 80, height: 80)
-                                .overlay(Circle().stroke(Color("color_primary"), lineWidth: 5))
-                                .clipShape(Circle())
+//                            Image("\(user)")
+                            CircleProfileColor(userImage: user)
+                            
                             Text("\(user)")
                                 .fontWeight(.semibold)
                                 .padding(.top, 3)
