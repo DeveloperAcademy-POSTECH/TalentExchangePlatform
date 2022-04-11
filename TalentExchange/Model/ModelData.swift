@@ -10,11 +10,12 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var users: [User] = load("userData.json")
+    @Published var cards: [Card] = load("cardData.json")
     
 }
 
 var users: [User] = load("userData.json")
-
+var cards: [Card] = load("cardData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
