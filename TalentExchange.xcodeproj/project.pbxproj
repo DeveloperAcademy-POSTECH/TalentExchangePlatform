@@ -26,6 +26,8 @@
 		A7911DFF2803C29000F5F300 /* DataViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911DFE2803C29000F5F300 /* DataViewExample.swift */; };
 		A7911E022803C63C00F5F300 /* cardData.json in Resources */ = {isa = PBXBuildFile; fileRef = A7911E012803C63C00F5F300 /* cardData.json */; };
 		A7911E062803C69400F5F300 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E052803C69400F5F300 /* Card.swift */; };
+		A7911E0A28046BB900F5F300 /* asher.png in Resources */ = {isa = PBXBuildFile; fileRef = A7911E0928046BB900F5F300 /* asher.png */; };
+		A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E0B28047F7A00F5F300 /* MyDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		A7911DFE2803C29000F5F300 /* DataViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewExample.swift; sourceTree = "<group>"; };
 		A7911E012803C63C00F5F300 /* cardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cardData.json; sourceTree = "<group>"; };
 		A7911E052803C69400F5F300 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A7911E0928046BB900F5F300 /* asher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asher.png; sourceTree = "<group>"; };
+		A7911E0B28047F7A00F5F300 /* MyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 		A79017F927FDEF0D00D1E316 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A7911E0928046BB900F5F300 /* asher.png */,
 				A79017FA27FDEF0D00D1E316 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -118,12 +123,12 @@
 		A790180527FDF29000D1E316 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A7911E082804223600F5F300 /* MyPage */,
 				A790182E27FFD20100D1E316 /* Common */,
 				A7911DFE2803C29000F5F300 /* DataViewExample.swift */,
 				A790180627FDF2B100D1E316 /* ExploreView.swift */,
 				A790180327FDF26500D1E316 /* HomeView.swift */,
 				4DE1487927FED13D00DB64F1 /* Chat */,
-				A790180A27FDF2D200D1E316 /* MyPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +167,15 @@
 				A7911DF52802C2AC00F5F300 /* userData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7911E082804223600F5F300 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A790180A27FDF2D200D1E316 /* MyPageView.swift */,
+				A7911E0B28047F7A00F5F300 /* MyDetailView.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +239,7 @@
 				A79017FB27FDEF0D00D1E316 /* Preview Assets.xcassets in Resources */,
 				A7911E022803C63C00F5F300 /* cardData.json in Resources */,
 				A7911DF62802C2AC00F5F300 /* userData.json in Resources */,
+				A7911E0A28046BB900F5F300 /* asher.png in Resources */,
 				A79017F827FDEF0D00D1E316 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7911DFA2803ABE900F5F300 /* User.swift in Sources */,
+				A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */,
 				A790180427FDF26500D1E316 /* HomeView.swift in Sources */,
 				A7911DFF2803C29000F5F300 /* DataViewExample.swift in Sources */,
 				4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */,
