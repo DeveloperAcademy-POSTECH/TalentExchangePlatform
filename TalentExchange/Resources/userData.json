@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "username": "asher",
+        "password": "1234",
+        "userimage": "asher",
+        "talents": ["디자인","사진","드라이빙"],
+        "interests": ["요리","컴퓨터공학"],
+        "city": "지곡동",
+        "bio": "다양한 활동을 공유해요"
+    },
+    {
+        "id": 2,
+        "username": "avery",
+        "password": "2345",
+        "userimage": "avery",
+        "talents": ["여행","축구"],
+        "interests": ["맛집"],
+        "city": "지곡동",
+        "bio": "동네 친구 구해요 포항항"
+    },
+    {
+        "id": 3,
+        "username": "grizzly",
+        "password": "3456",
+        "userimage": "grizzly",
+        "talents": ["원피스","맛집"],
+        "interests": ["영어"],
+        "city": "지곡동",
+        "bio": "영어로 원피스 토론을 하는 날까지"
+    },
+    {
+        "id": 4,
+        "username": "ground",
+        "password": "4567",
+        "userimage": "ground",
+        "talents": ["독서","요리"],
+        "interests": ["헬스","야구","컴퓨터공학"],
+        "city": "대잠동",
+        "bio": "땅-"
+    },
+    {
+        "id": 5,
+        "username": "jay",
+        "password": "5678",
+        "userimage": "jay",
+        "talents": ["야구","헬스","일본어"],
+        "interests": ["맛집","사진"],
+        "city": "이동",
+        "bio": "안녕하세요!"
+    },
+    {
+        "id": 6,
+        "username": "sohni",
+        "password": "6789",
+        "userimage": "sohni",
+        "talents": ["반려견","컴퓨터공학"],
+        "interests": ["여행","봉사"],
+        "city": "지곡동",
+        "bio": "새로운 활동하고 싶어요!"
+    },
+    {
+        "id": 7,
+        "username": "may",
+        "password": "7890",
+        "userimage": "may",
+        "talents": ["사교댄스","영어"],
+        "interests": ["피아노","원피스"],
+        "city": "효자동",
+        "bio": "활동적인편"
+    },
+    {
+        "id": 8,
+        "username": "jun",
+        "password": "8901",
+        "userimage": "jun",
+        "talents": ["사진","봉사"],
+        "interests": ["공연"],
+        "city": "효자동",
+        "bio": "art is like..."
+    },
+    {
+        "id": 9,
+        "username": "august",
+        "password": "9012",
+        "userimage": "august",
+        "talents": ["피아노","공연"],
+        "interests": ["사진"],
+        "city": "대잠동",
+        "bio": "예술의 모든 것을 좋아합니다"
+    }
+]
