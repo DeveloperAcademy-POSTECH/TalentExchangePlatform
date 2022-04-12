@@ -12,14 +12,18 @@ struct MyDetailView: View {
     @State var appear = false
     var namespace: Namespace.ID
     
-    let stop1 = Gradient.Stop(color: .black, location: 0.1)
-    let stop2 = Gradient.Stop(color: .white, location: 0.4)
+    let stop1 = Gradient.Stop(color: .black, location: 0)
+    let stop2 = Gradient.Stop(color: .white, location: 0)
     
     var body: some View {
         
+        
+        ScrollView(showsIndicators: false){
+            
+            /** USER PROFILE CARD **/
             VStack(spacing: 20){
                 
-                //start of card
+                //CARD
                 VStack(alignment: .leading){
                     HStack{
                         Image("asher")
@@ -27,10 +31,10 @@ struct MyDetailView: View {
                             .background( Color("color_bg_inverted").opacity(0.5))
                             .frame(width: 70, height: 70)
                             .clipShape(Circle())
-                            
+                        
                         Text("Asher").bold()
                             .foregroundColor(.white)
-                           
+                        
                         
                     }
                     .padding(.top, 50)
@@ -38,12 +42,13 @@ struct MyDetailView: View {
                     
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
+                    // BIO
                     Text("애셔 입니다!! 다 잘합니다. 창원에 살구요.")
                         .font(.caption).foregroundColor(.white)
                         .padding(EdgeInsets(top: 5, leading: 5, bottom: 0, trailing: 0))
                         .matchedGeometryEffect(id: "bio", in: namespace)
                     
-                    
+                    // INTERESTS
                     Text("👀 관심있어요")
                         .font(.subheadline).bold().foregroundColor(.white)
                         .padding(EdgeInsets(top: 25, leading: 5, bottom: 0, trailing: 0))
@@ -73,9 +78,10 @@ struct MyDetailView: View {
                     }
                     .matchedGeometryEffect(id: "interests", in: namespace)
                     
+                    // TALENTS
                     Text("👍 할줄알아요")
                         .font(.subheadline).bold().foregroundColor(.white)
-                        .padding(EdgeInsets(top: 40, leading: 5, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 25, leading: 5, bottom: 0, trailing: 0))
                         .matchedGeometryEffect(id: "talent", in: namespace)
                     
                     HStack{
@@ -125,50 +131,58 @@ struct MyDetailView: View {
                 )
                 .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
                 
-                ScrollView(showsIndicators: false){
-                    
-                    
-                    
-                    // BOTTOM CONTENTS
-                    VStack{
-                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including ")
-                            
-                            
-                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including ")
-                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                        
-                        // BOTTOM CONTENTS
-                        
-                        Spacer()
-                    }
-                    
-                    //Scroll View
-                    .frame(maxWidth: .infinity)
-    
-                }
-                .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
-                //smooooth
-                .offset(y: appear ? 0 : 100)
-                .onAppear{
-                    appear = true
-                }
-                .onDisappear{
-                    appear = false
-                }
-//                    .transition(.move(edge: .bottom))
-
                 
- 
-            }// TopView
-            .background(
-                    LinearGradient(
-//                        gradient: Gradient(colors: [.black, .white]),
-                        gradient: Gradient(stops: [stop1, stop2]),
-                        startPoint: .top, endPoint: .bottom)
-                )
-            .ignoresSafeArea()
-        
+                Spacer()
+                
 
+                    .padding(EdgeInsets(top: -20, leading: 0, bottom: 0, trailing: 0))
+                //smooooth
+                    .offset(y: appear ? 0 : 100)
+                    .onAppear{
+                        appear = true
+                    }
+                    .onDisappear{
+                        appear = false
+                    }
+                //                    .transition(.move(edge: .bottom))
+                
+            }
+            /** USER PROFILE CARD **/
+            
+            
+            
+            /** DETAILS **/
+            VStack{
+                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including ")
+                
+                
+                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including ")
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                
+                Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including ")
+                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+
+                    
+                
+                // BOTTOM CONTENTS
+                
+                Spacer()
+            }
+            /** DETAILS **/
+            
+            //Scroll View frame 속성 : 어딜눌러도 스크롤
+            .frame(maxWidth: .infinity)
+            
+        }
+        .background(
+            LinearGradient(
+                //                        gradient: Gradient(colors: [.black, .white]),
+                gradient: Gradient(stops: [stop1, stop2]),
+                startPoint: .top, endPoint: .bottom)
+        )
+        .ignoresSafeArea()
+        
+        
     }// body
 }
 
