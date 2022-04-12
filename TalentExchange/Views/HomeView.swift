@@ -17,7 +17,7 @@ struct HomeView: View {
         /*
          Screen Router 활용예시 : explore 로 가는 버튼을 구현하는 경우
             Button {
-                router.changes(to: .explore)
+                router.changes(to: .home)
             } label: {
                 Text("Exlpore로 가기")
             }
