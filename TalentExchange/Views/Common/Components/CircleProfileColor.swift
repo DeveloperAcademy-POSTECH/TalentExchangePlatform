@@ -18,6 +18,5 @@ struct CircleProfileColor: View {
             .frame(width: 80, height: 80)
             .overlay(Circle().stroke(Color("color_primary"), lineWidth: 5))
             .clipShape(Circle())
-        
     }
 }
