@@ -67,7 +67,7 @@ struct DetailPage: View {
                             .padding(.horizontal, 15.0)
                             .background(Color("color_primary"))
                             .clipShape(Capsule())
-                        Text("애니30편")
+                        Text("애니50편")
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .font(.caption)
