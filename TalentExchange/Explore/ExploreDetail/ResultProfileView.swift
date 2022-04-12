@@ -17,11 +17,6 @@ struct ResultProfileView: View {
     var numberid: [Int] // 5, 6, 7, 8
     var numberuid: Int // 3
     
-    /*
-    var userName: String = ""
-    var userImage: String = ""
-    */
-    
     var body: some View {
         HStack {
             VStack{
@@ -60,5 +55,3 @@ func getusername(number: Int) -> String {
     }
     return result
 }
-
-

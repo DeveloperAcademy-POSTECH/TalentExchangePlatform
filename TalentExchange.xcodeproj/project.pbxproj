@@ -90,18 +90,18 @@
 				9EBAA4E62804215E00B853FA /* SearchFieldView.swift */,
 				9EBAA4E42804215E00B853FA /* PickerView.swift */,
 				9EBAA4E52804215E00B853FA /* ResultView.swift */,
-				9EBAA4E72804215E00B853FA /* SearchResult */,
+				9EBAA4E72804215E00B853FA /* ExploreDetail */,
 			);
 			name = Explore;
 			path = ../Explore;
 			sourceTree = "<group>";
 		};
-		9EBAA4E72804215E00B853FA /* SearchResult */ = {
+		9EBAA4E72804215E00B853FA /* ExploreDetail */ = {
 			isa = PBXGroup;
 			children = (
 				9EBAA4E82804215E00B853FA /* ResultProfileView.swift */,
 			);
-			path = SearchResult;
+			path = ExploreDetail;
 			sourceTree = "<group>";
 		};
 		A79017E727FDEF0B00D1E316 = {
