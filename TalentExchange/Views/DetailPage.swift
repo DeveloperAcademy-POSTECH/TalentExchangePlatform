@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-let personality = ["사진장인", "애니 30편", "칭찬셔틀"]
-let textbody = ["대학에서 수묵화를 부전공했습니다.\n현재는 제품 디자이너로 종사하고 있고 입시 미술 학원에서 2년 정도 수묵화를 가르친 경험이 있습니다.\n동양화나 서양화, 유화 등 주말에 한 번씩 만나서 같이 그림 그리실 분 구해요~!"]
+
 
 struct DetailPage: View {
     
@@ -38,7 +37,7 @@ struct DetailPage: View {
                             .foregroundColor(.white)
                             .font(.caption)
                             .padding(.vertical, 7.0)
-                            .padding(.horizontal, 20.0)
+                            .padding(.horizontal, 15.0)
                             .background(.gray)
                             .clipShape(Capsule())
                                             
@@ -47,7 +46,7 @@ struct DetailPage: View {
                                 .foregroundColor(.white)
                                 .font(.caption)
                                 .padding(.vertical, 7.0)
-                                .padding(.horizontal, 20.0)
+                                .padding(.horizontal, 19.0)
                                 .background(.gray)
                                 .clipShape(Capsule())
                             Spacer()
@@ -61,32 +60,31 @@ struct DetailPage: View {
                             .fontWeight(.semibold)
                         Text("사진장인")
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color("color_variation_2"))
                             .font(.caption)
-                            .padding(.vertical, 7.0)
-                            .padding(.horizontal, 15.0)
-                            .background(Color("color_primary"))
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 10)
+                            .background(Color("color_variation_1"))
                             .clipShape(Capsule())
-                        Text("애니50편")
+                        Text("애니30편")
                             .fontWeight(.bold)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color("color_variation_4"))
                             .font(.caption)
-                            .padding(.vertical, 7.0)
-                            .padding(.horizontal, 15.0)
-                            .background(Color("color_primary"))
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 10)
+                            .background(Color("color_variation_3"))
                             .clipShape(Capsule())
                         Text("칭찬셔틀")
                                     .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("color_secondary"))
                                 .font(.caption)
-                                .padding(.vertical, 7.0)
-                                .padding(.horizontal, 15.0)
+                                .padding(.vertical, 6)
+                                .padding(.horizontal, 10)
                                 .background(Color("color_primary"))
                                 .clipShape(Capsule())
                         
                             }
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet justo donec enim diam  ")
-    //                            .frame(height: 500)
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet justo donec enim diamLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet justo donec enim diam  ")
                                 .padding()
                                 }
                             }
@@ -94,9 +92,19 @@ struct DetailPage: View {
                     Spacer()
                     HStack(){
                             Spacer()
-                            Text("대화 시작")
-                        // 둥그런 사각형 버튼을 여기에 넣어주세요
-                    }
+                        Button("채팅 시작")
+                            {
+                            ///*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/ here
+                        }
+                        .padding(EdgeInsets(top: 7, leading:20, bottom: 7, trailing: 20))
+                        .background(Color("color_tertiary"))
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 5)
+                        
+                        
+                    }.padding()
                        
                     }//VStack
                 }// ZStack
