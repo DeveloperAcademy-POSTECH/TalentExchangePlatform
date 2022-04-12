@@ -16,11 +16,8 @@ struct ChatItem: View {
     
     var body: some View {
         HStack{
-            Image(userImage)
-                .resizable()
-                .background( Color("color_bg_inverted").opacity(0.05))
-                .frame(width: 80, height: 80)
-                .clipShape(Circle())
+            CircleProfile(userImage: userImage)
+        
             VStack(alignment: .leading, spacing: 8){
                 HStack{
                     Text(userName)

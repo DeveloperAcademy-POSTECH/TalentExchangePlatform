@@ -23,6 +23,8 @@
 		A790180727FDF2B100D1E316 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790180627FDF2B100D1E316 /* ExploreView.swift */; };
 		A790180927FDF2C200D1E316 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790180827FDF2C200D1E316 /* ChatView.swift */; };
 		A790180B27FDF2D200D1E316 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790180A27FDF2D200D1E316 /* MyPageView.swift */; };
+		A790183127FFD24B00D1E316 /* CircleProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790183027FFD24B00D1E316 /* CircleProfile.swift */; };
+		A790183327FFD67100D1E316 /* CircleProfileColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A790183227FFD67100D1E316 /* CircleProfileColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		A790180627FDF2B100D1E316 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		A790180827FDF2C200D1E316 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		A790180A27FDF2D200D1E316 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		A790183027FFD24B00D1E316 /* CircleProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfile.swift; sourceTree = "<group>"; };
+		A790183227FFD67100D1E316 /* CircleProfileColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfileColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,12 +125,30 @@
 		A790180527FDF29000D1E316 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A790182E27FFD20100D1E316 /* Common */,
 				A790180327FDF26500D1E316 /* HomeView.swift */,
 				A790180627FDF2B100D1E316 /* ExploreView.swift */,
 				4DE1487927FED13D00DB64F1 /* Chat */,
 				A790180A27FDF2D200D1E316 /* MyPageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A790182E27FFD20100D1E316 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A790182F27FFD21F00D1E316 /* Components */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A790182F27FFD21F00D1E316 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A790183027FFD24B00D1E316 /* CircleProfile.swift */,
+				A790183227FFD67100D1E316 /* CircleProfileColor.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +234,10 @@
 				A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */,
 				A790180927FDF2C200D1E316 /* ChatView.swift in Sources */,
 				4DE1487B27FED6E000DB64F1 /* SearchView.swift in Sources */,
+				A790183127FFD24B00D1E316 /* CircleProfile.swift in Sources */,
 				A790180727FDF2B100D1E316 /* ExploreView.swift in Sources */,
 				A79017F427FDEF0B00D1E316 /* TalentExchangeApp.swift in Sources */,
+				A790183327FFD67100D1E316 /* CircleProfileColor.swift in Sources */,
 				4DEADE8328048F5800AE2CFC /* ImagePicker.swift in Sources */,
 				4DE1487D27FED72B00DB64F1 /* OnlineUserView.swift in Sources */,
 				4D893C5A2803CD080059565F /* LoginView.swift in Sources */,
