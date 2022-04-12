@@ -17,13 +17,13 @@ struct LikeHeart: View {
         isLiked ? 0.6:2.0
     }
     
-/*    func performanAnimation(){
+    func performanAnimation(){
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500)){
             likeAnimation=false
         }
   
     }
- */
+ 
     
     var body: some View {
         
@@ -32,7 +32,7 @@ struct LikeHeart: View {
     //                                animate.toggle()
     //                            }
             self.animate = true
-            DispatchQueue.main.asyncAfter(deadline: .now()/*+self.duration*/, execute:{
+            DispatchQueue.main.asyncAfter(deadline: .now()+self.duration, execute:{
                 self.animate=false
                 self.isLiked.toggle()
             })
@@ -42,9 +42,9 @@ struct LikeHeart: View {
         }
         .font(.title)
         .padding([.top, .trailing], 20)
-    //    .scaleEffect(animate ? animationScale: 1)
-    //    .animation(.easeIn(duration: duration), value: offset)
-  //      .animation(.easeIn(duration: duration))
+        .scaleEffect(animate ? animationScale: 1)
+        .animation(.easeIn(duration: duration), value: offset)
+        .animation(.easeIn(duration: duration))
         
         
         
