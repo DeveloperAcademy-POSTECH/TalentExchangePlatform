@@ -26,7 +26,7 @@ struct ChatView: View {
             Color("color_bg").edgesIgnoringSafeArea(.all)
             VStack{
                 
-                HStack{
+               HStack{
                     Text("Chat")
                         .fontWeight(.semibold)
                         .font(.largeTitle)
@@ -34,7 +34,7 @@ struct ChatView: View {
                     Image(systemName: "square.and.pencil")
                         .foregroundColor(Color("color_primary"))
                         .font(.title2)
-                }
+              }
                 
                 ScrollView(showsIndicators: false){
                     VStack(alignment: .leading, spacing: 5){

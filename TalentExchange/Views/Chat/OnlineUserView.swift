@@ -13,7 +13,6 @@ struct OnlineUsersView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            VStack{
                 HStack(spacing:25){
                     ForEach(users, id: \.self) { user in
                         VStack{
@@ -26,7 +25,6 @@ struct OnlineUsersView: View {
                         }
                     }
                 }
-            }
             .padding(.vertical, 20)
         }
     }

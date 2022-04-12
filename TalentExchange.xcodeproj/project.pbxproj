@@ -10,6 +10,7 @@
 		4DE1487B27FED6E000DB64F1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487A27FED6E000DB64F1 /* SearchView.swift */; };
 		4DE1487D27FED72B00DB64F1 /* OnlineUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */; };
 		4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487E27FED74D00DB64F1 /* Chatitem.swift */; };
+		69FEEB612804136300421AD1 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEEB602804136300421AD1 /* DetailPage.swift */; };
 		A79017F427FDEF0B00D1E316 /* TalentExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */; };
 		A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79017F527FDEF0B00D1E316 /* ContentView.swift */; };
 		A79017F827FDEF0D00D1E316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A79017F727FDEF0D00D1E316 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		4DE1487A27FED6E000DB64F1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUserView.swift; sourceTree = "<group>"; };
 		4DE1487E27FED74D00DB64F1 /* Chatitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatitem.swift; sourceTree = "<group>"; };
+		69FEEB602804136300421AD1 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		A79017F027FDEF0B00D1E316 /* TalentExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentExchangeApp.swift; sourceTree = "<group>"; };
 		A79017F527FDEF0B00D1E316 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				A790180627FDF2B100D1E316 /* ExploreView.swift */,
 				4DE1487927FED13D00DB64F1 /* Chat */,
 				A790180A27FDF2D200D1E316 /* MyPageView.swift */,
+				69FEEB602804136300421AD1 /* DetailPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				A790180427FDF26500D1E316 /* HomeView.swift in Sources */,
 				4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */,
 				A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */,
+				69FEEB612804136300421AD1 /* DetailPage.swift in Sources */,
 				A790180927FDF2C200D1E316 /* ChatView.swift in Sources */,
 				4DE1487B27FED6E000DB64F1 /* SearchView.swift in Sources */,
 				A790183127FFD24B00D1E316 /* CircleProfile.swift in Sources */,
