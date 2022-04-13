@@ -12,7 +12,7 @@
     {
         "id": 2,
         "username": "avery",
-        "password": "2345",
+        "password": "23456",
         "userimage": "avery",
         "talents": ["여행","축구"],
         "interests": ["맛집"],
