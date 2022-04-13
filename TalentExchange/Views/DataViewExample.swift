@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ExploreRow: View {
     
-    //@EnvironmentObject -> manage data between multiple views
     @EnvironmentObject var modelData: ModelData
     
     var user: User

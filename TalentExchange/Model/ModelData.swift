@@ -8,12 +8,11 @@
 import Foundation
 import Combine
 
-//이를 통해서 View에서 자동으로 업데이트 되도록 하였다.
 final class ModelData: ObservableObject {
     @Published var users: [User] = load("userData.json")
     @Published var cards: [Card] = load("cardData.json")
 }
-//이건 쓰이는 내용이 아닌 듯?
+
 var users: [User] = load("userData.json")
 var cards: [Card] = load("cardData.json")
 
