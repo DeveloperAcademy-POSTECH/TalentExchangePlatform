@@ -18,40 +18,90 @@ struct ResultView: View {
     var ccard: [Card] = ModelData().cards
     
     var body: some View {
+        
         //사용자가 탐색 선택, 원피스 입력했다고 가정
         if(isProfile == Submenu.Explore.rawValue) {
             
-            var searchImage: [String] = getimageexplore(it: ccard, talent: searchData)
+            var searchImage: [Image] = getimageexplore(it: ccard, talent: searchData)
             //[이미지파일명, 이미지파일명, 이미지파일명]
             
             let columns = [
-                  //추가 하면 할수록 화면에 보여지는 개수가 변함
-                    GridItem(.flexible()),
-                    GridItem(.flexible())
-                ]
-            NavigationView{
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: columns,
-                              alignment: .center,
-                              spacing: 6,
-                              content: {
-                        ForEach(searchImage, id:\.self) { s in
-                            NavigationLink(destination: Text("해당사진파일명 : \(s)")) {
-                            Image(s)
-                                .resizable()
-                                .cornerRadius( 10)
-                                .frame(height: 180)
-                                .padding(5)
-                            } // NavigationLink end.
-                        } // ForEach end.
-                    }) // LazyVGrid end.
-                } // ScrollView end.
-            }// NavigationView end.
+                //추가 하면 할수록 화면에 보여지는 개수가 변함
+                GridItem(.flexible()),
+                GridItem(.flexible())
+            ]
+            //사용자가 아무런 입력을 하지 않았을 때의 화면
+            if(searchData == ""){
+                var randomccard: [Card] = ccard.shuffled()
+                
+                VStack{
+                    Text("탐색 검색어 목록")
+                    ScrollView (.horizontal, showsIndicators: false) {
+                             HStack(alignment:.top){
+                                 ForEach(0..<ccard.count, id:\.self) { s in
+                                     Capsule()
+                                         .fill(Color.yellow)
+                                         .frame(width:80, height:30)
+                                         .overlay(
+                                     Text("\(ccard[s].talents)")
+                                         )
+                                 }//ForEach end.
+                                 .padding(.vertical)
+                             }//HStack end.
+                         }//ScrollView end.
+
+                    
+                    Text("랜덤으로 탐색")
+                        .frame(alignment:.center)
+                        .padding(10)
+                        .offset(y:-10)
+                    NavigationView{
+                        ScrollView(.vertical, showsIndicators:false) {
+                            LazyVGrid(columns: columns,
+                                      alignment: .center,
+                                      spacing: 5,
+                                      content: {
+                                ForEach(0..<ccard.count, id:\.self) { s in
+                                    NavigationLink(destination:Text("This is random image")) {
+                                        randomccard[s].image
+                                            .resizable()
+                                            .cornerRadius(10)
+                                            .frame(width:180,height:180)
+                                            .clipped()
+                                    }//NavigationLink end.
+                                }//ForEach end.
+                            })//LazyVGrid end.
+                        }//ScrollView end.
+                        .offset(y:-100)
+                    }//NavigationView end.
+                }//VStack end.
+                .padding(5)
+                
+            }//if(값이 없을 경우) end.
+            //이제부터는 사용자가 값을 입력했을 경우(취미,관심사)
+            else {
+                NavigationView{
+                    ScrollView(.vertical, showsIndicators: false) {
+                        LazyVGrid(columns: columns,
+                                  alignment: .center,
+                                  spacing: 6,
+                                  content: {
+                            ForEach(0..<searchImage.count, id:\.self) { s in NavigationLink(destination: Text("yes i can do")) { searchImage[s]
+                                    .resizable()
+                                    .cornerRadius(10)
+                                    .frame(height:180)
+                                    .padding(15)
+                                } // NavigationLink end.
+                            } // ForEach end.
+                        }) // LazyVGrid end.
+                    } // ScrollView end.
+                    .offset(y:-100)
+                }// NavigationView end.
+            } //else(값이 존재할 경우) end.
         }//if(탐색) end.
         
         //유저가 프로필 선택
         else {
-            
             var searchID: Int = getid(it: uuser, name: searchData) // grizzly => id:3
             var searchUID: [Int] = getuid(it: ccard, number: searchID) // uid:3 => id: 5, 6, 7, 8
 
@@ -63,8 +113,8 @@ struct ResultView: View {
                     } // NavigationLink End.
                 } // List end.
             } // NavigationView end.
-        } 
-    }
+        }
+    } // body some View end.
 } //struct ResultView end.
 
 func getid(it: [User], name: String) -> Int {
@@ -90,13 +140,13 @@ func getuid(it: [Card], number: Int) -> [Int] {
     return result
 }
 
-func getimageexplore(it: [Card], talent: String) -> [String] {
-    var result: [String] = []
+func getimageexplore(it: [Card], talent: String) -> [Image] {
+    var result: [Image] = []
     
     for index in 0..<it.count {
         if(it[index].talents == talent) {
-            result.append(it[index].cardImage)
-        }
+            result.append(it[index].image)
+        } // cardImage 였었음
     }
     return result
 }

@@ -11,7 +11,6 @@ struct SearchFieldView: View {
     
     //통상 검색결과 변수명은 searchText로 하는 것 같은데, 혹시 Chat에서의 검색결과와 혼용될까봐 다른 변수명인 searchData로 명명했음
     @Binding var searchData: String
-    //@State var editText : Bool = false
     
     var body: some View {
         VStack{

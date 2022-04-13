@@ -30,7 +30,7 @@ struct ResultProfileView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(spacing: 10){
                     ForEach(numberid, id: \.self){ s in
-                        Image( ccard[s-1].cardImage )
+                        ccard[s-1].image
                             .resizable()
                             .background( Color("color_bg_inverted").opacity(0.05))
                             .frame(width: 80, height: 80)
