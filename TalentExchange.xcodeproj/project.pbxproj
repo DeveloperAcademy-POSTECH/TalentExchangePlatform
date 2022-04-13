@@ -16,6 +16,7 @@
 		4DE1487B27FED6E000DB64F1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487A27FED6E000DB64F1 /* SearchView.swift */; };
 		4DE1487D27FED72B00DB64F1 /* OnlineUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */; };
 		4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487E27FED74D00DB64F1 /* Chatitem.swift */; };
+		A737B9D1280555400066EF71 /* MyDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737B9D0280555400066EF71 /* MyDetailCardView.swift */; };
 		4DEADE8328048F5800AE2CFC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEADE8228048F5800AE2CFC /* ImagePicker.swift */; };
 		A79017F427FDEF0B00D1E316 /* TalentExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */; };
 		A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79017F527FDEF0B00D1E316 /* ContentView.swift */; };
@@ -33,6 +34,8 @@
 		A7911DFF2803C29000F5F300 /* DataViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911DFE2803C29000F5F300 /* DataViewExample.swift */; };
 		A7911E022803C63C00F5F300 /* cardData.json in Resources */ = {isa = PBXBuildFile; fileRef = A7911E012803C63C00F5F300 /* cardData.json */; };
 		A7911E062803C69400F5F300 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E052803C69400F5F300 /* Card.swift */; };
+		A7911E0A28046BB900F5F300 /* asher.png in Resources */ = {isa = PBXBuildFile; fileRef = A7911E0928046BB900F5F300 /* asher.png */; };
+		A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E0B28047F7A00F5F300 /* MyDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,7 @@
 		4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUserView.swift; sourceTree = "<group>"; };
 		4DE1487E27FED74D00DB64F1 /* Chatitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatitem.swift; sourceTree = "<group>"; };
 		4DEADE8228048F5800AE2CFC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		A737B9D0280555400066EF71 /* MyDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailCardView.swift; sourceTree = "<group>"; };
 		A79017F027FDEF0B00D1E316 /* TalentExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalentExchangeApp.swift; sourceTree = "<group>"; };
 		A79017F527FDEF0B00D1E316 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		A7911DFE2803C29000F5F300 /* DataViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewExample.swift; sourceTree = "<group>"; };
 		A7911E012803C63C00F5F300 /* cardData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cardData.json; sourceTree = "<group>"; };
 		A7911E052803C69400F5F300 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A7911E0928046BB900F5F300 /* asher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asher.png; sourceTree = "<group>"; };
+		A7911E0B28047F7A00F5F300 /* MyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 		A79017F927FDEF0D00D1E316 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				A7911E0928046BB900F5F300 /* asher.png */,
 				A79017FA27FDEF0D00D1E316 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -153,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A790182E27FFD20100D1E316 /* Common */,
+				A7911E082804223600F5F300 /* MyPage */,
 				A7911DFE2803C29000F5F300 /* DataViewExample.swift */,
 				A790180627FDF2B100D1E316 /* ExploreView.swift */,
 				450DAF4928048C00003A8886 /* UserPage */,
@@ -197,6 +205,16 @@
 				A7911DF52802C2AC00F5F300 /* userData.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7911E082804223600F5F300 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A790180A27FDF2D200D1E316 /* MyPageView.swift */,
+				A7911E0B28047F7A00F5F300 /* MyDetailView.swift */,
+				A737B9D0280555400066EF71 /* MyDetailCardView.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +285,7 @@
 				A79017FB27FDEF0D00D1E316 /* Preview Assets.xcassets in Resources */,
 				A7911E022803C63C00F5F300 /* cardData.json in Resources */,
 				A7911DF62802C2AC00F5F300 /* userData.json in Resources */,
+				A7911E0A28046BB900F5F300 /* asher.png in Resources */,
 				A79017F827FDEF0D00D1E316 /* Assets.xcassets in Resources */,
 				4D893C532802640C0059565F /* GoogleService-Info.plist in Resources */,
 			);
@@ -280,9 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7911DFA2803ABE900F5F300 /* User.swift in Sources */,
+				A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */,
 				A790180427FDF26500D1E316 /* HomeView.swift in Sources */,
 				A7911DFF2803C29000F5F300 /* DataViewExample.swift in Sources */,
 				4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */,
+				A737B9D1280555400066EF71 /* MyDetailCardView.swift in Sources */,
 				A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */,
 				A790180927FDF2C200D1E316 /* ChatView.swift in Sources */,
 				450DAF452803E0E4003A8886 /* UserPageView.swift in Sources */,
