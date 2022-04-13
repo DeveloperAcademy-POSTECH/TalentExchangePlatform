@@ -9,35 +9,49 @@ import SwiftUI
 import Firebase
 
 class FirebaseManager: NSObject {
-
+    
     let auth: Auth
     let storage: Storage
+    let firestore: Firestore
 
     static let shared = FirebaseManager()
-
+    
     override init() {
         FirebaseApp.configure()
-
+        
         self.auth = Auth.auth()
         self.storage = Storage.storage()
-
+        self.firestore = Firestore.firestore()
+        
         super.init()
     }
-
+    
 }
 
 struct LoginView: View {
+    
+    let didCompletelogin: () -> ()
 
-    @State var isLoginMode = false
-    @State var email = ""
-    @State var password = ""
-    @State var shouldShowImagePicker = false
+    @State private var isLoginMode = false
+    @State private var email = ""
+    @State private var password = ""
+    @State private var shouldShowImagePicker = false
 
     var body: some View {
-        NavigationView {
-            ScrollView {
+        ZStack{
+            VStack{
+            HStack {
+                Text(isLoginMode ? "로그인" : "회원가입")
+                    .fontWeight(.semibold)
+                    .font(.largeTitle)
+                Spacer()
+            }
+            
 
-                VStack(spacing: 16) {
+            VStack {
+                VStack {
+
+                VStack(spacing: 25) {
                     Picker(selection: $isLoginMode, label: Text("Picker here")) {
                         Text("로그인")
                             .tag(true)
@@ -57,16 +71,16 @@ struct LoginView: View {
                                         .scaledToFill()
                                         .frame(width: 128, height: 128)
                                         .cornerRadius(64)
-                                } else {
-                                    Image(systemName: "person.fill")
-                                        .font(.system(size: 64))
-                                        .padding()
-                                        .foregroundColor(Color(.label))
+//                                } else {
+//                                    Image(systemName: "person.fill")
+//                                        .font(.system(size: 64))
+//                                        .padding()
+//                                        .foregroundColor(Color("color_primary"))
                                 }
                             }
-                            .overlay(RoundedRectangle(cornerRadius: 64)
-                                        .stroke(Color.black, lineWidth: 3)
-                            )
+//                            .overlay(RoundedRectangle(cornerRadius: 64)
+//                                        .stroke(Color("color_primary"), lineWidth: 1)
+                            //)
                         }
                     }
                     
@@ -80,40 +94,43 @@ struct LoginView: View {
                     .padding(12)
                     .background(Color.white)
                     .clipShape(Capsule())
-                    
+                    Spacer()
                     Button {
                         handleAction()
                     } label: {
-                        HStack {
+                        HStack() {
                             Spacer()
                             Text(isLoginMode ? "로그인" : "회원가입")
                                 .foregroundColor(.white)
-                                .padding(.vertical, 10)
+                                .padding(.vertical, 15)
                                 .font(.system(size: 14, weight: .semibold))
                             Spacer()
                         }.background(Color("color_primary"))
+                            .clipShape(Capsule())
 
                     }
                     Text(self.loginStatusMessage)
                         .foregroundColor(.red)
+                
                 }
-                .padding()
-
+                }
             }
-            .navigationTitle(isLoginMode ? "로그인" : "회원가입")
-            
-            .background(Color(.init(white: 0, alpha: 0.05))
-                            .ignoresSafeArea())
+            //.padding(.top, -30)//위로 올려두기......
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
             ImagePicker(image: $image)
-                .ignoresSafeArea()
+        
         }
+    }
+        .padding(.top)
+        .padding(.horizontal)
     }
     
     
     @State var image: UIImage?
+    @Environment(\.presentationMode) var presentationMode
+
 
     private func handleAction() {
         if isLoginMode {
@@ -131,13 +148,20 @@ struct LoginView: View {
                 return
             }
             
-            print("Successfully logged in as user: \(result?.user.uid ?? "")")
+            presentationMode.wrappedValue.dismiss()
+
             
-            self.loginStatusMessage = "로그인 성공: \(result?.user.uid ?? "")"
+//            print("Successfully logged in as user: \(result?.user.uid ?? "")")
+//            
+//            
+//            
+//            self.loginStatusMessage = "로그인 성공: \(result?.user.uid ?? "")"
+//            
+//            self.didCompletelogin()
         }
     }
     
-    @State var loginStatusMessage = ""
+    @State public var loginStatusMessage = ""
     
     private func createNewAccount() {
         FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { result, err in
@@ -150,36 +174,53 @@ struct LoginView: View {
             print("Successfully created user: \(result?.user.uid ?? "")")
             
             self.loginStatusMessage = "회원가입 성공: \(result?.user.uid ?? "")"
-            self.persistImageToStorage()
+      //      self.persistImageToStorage()
         }
     }
-    private func persistImageToStorage() {
-//        let filename = UUID().uuidString
-        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
-        let ref = FirebaseManager.shared.storage.reference(withPath: uid)
-        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
-        ref.putData(imageData, metadata: nil) { metadata, err in
-            if let err = err {
-                self.loginStatusMessage = "Failed to push image to Storage: \(err)"
-                return
-            }
-            
-            ref.downloadURL { url, err in
-                if let err = err {
-                    self.loginStatusMessage = "Failed to retrieve downloadURL: \(err)"
-                    return
-                }
-                
-                self.loginStatusMessage = "Successfully stored image with url: \(url?.absoluteString ?? "")"
-                print(url?.absoluteString)
-            }
-        }
-    }
+//    private func persistImageToStorage() {
+////        let filename = UUID().uuidString
+//        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+//        let ref = FirebaseManager.shared.storage.reference(withPath: uid)
+//        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
+//        ref.putData(imageData, metadata: nil) { metadata, err in
+//            if let err = err {
+//                self.loginStatusMessage = "Failed to push image to Storage: \(err)"
+//                return
+//            }
+//
+//            ref.downloadURL { url, err in
+//                if let err = err {
+//                    self.loginStatusMessage = "Failed to retrieve downloadURL: \(err)"
+//                    return
+//                }
+//
+//                self.loginStatusMessage = "Successfully stored image with url: \(url?.absoluteString ?? "")"
+//                print(url?.absoluteString)
+//                guard let url = url else { return }
+//                self.storeUserInformation(imageProfileUrl: url)
+//            }
+//        }
+//    }
+//    private func storeUserInformation(imageProfileUrl: URL) {
+//        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+//        let userData = ["email": self.email, "uid": uid, "profileImageUrl": imageProfileUrl.absoluteString]
+//        FirebaseManager.shared.firestore.collection("users")
+//            .document(uid).setData(userData) { err in
+//                if let err = err {
+//                    print(err)
+//                    self.loginStatusMessage = "\(err)"
+//                    return
+//                }
+//
+//                print("Success")
+//            }
+//    }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(didCompletelogin: {
+        })
             .environmentObject(TabRouter())
     }
 }

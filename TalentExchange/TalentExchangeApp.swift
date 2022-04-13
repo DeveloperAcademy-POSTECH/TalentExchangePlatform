@@ -32,7 +32,10 @@ struct TalentExchangeApp: App {
     
     
     var body: some Scene {
+        
+        
         WindowGroup {
+            
             TabView(selection: $router.screen){ // 라우터의 현재 value에 맞춰 스크린 변함
                 HomeView()
 //                    .badge(10) => alert 개수 `control

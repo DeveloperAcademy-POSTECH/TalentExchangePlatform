@@ -10,10 +10,18 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var router: TabRouter
+    @State var showSheet: Bool = true
     
     var body: some View {
-        Text("Home")
-        
+        Button(action: {
+                        showSheet.toggle()
+        }) {
+            Text("회원가입")
+                        .fullScreenCover(isPresented: $showSheet, content: {
+                            LoginView(didCompletelogin: {
+                            }).foregroundColor(Color.black)
+                        }
+                        )
         /*
          Screen Router 활용예시 : explore 로 가는 버튼을 구현하는 경우
             Button {
@@ -22,6 +30,7 @@ struct HomeView: View {
                 Text("Exlpore로 가기")
             }
         */
+    }
     }
 }
 
