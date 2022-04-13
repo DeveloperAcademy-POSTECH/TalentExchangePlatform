@@ -118,9 +118,6 @@
 				4D893C582803CCF10059565F /* Login */,
 				A7911DEE2802C21100F5F300 /* Resources */,
 				A7911DED2802BA5400F5F300 /* Model */,
-=========
-				4D893C582803CCF10059565F /* Login */,
->>>>>>>>> Temporary merge branch 2
 				A790180527FDF29000D1E316 /* Views */,
 				A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */,
 				A79017F527FDEF0B00D1E316 /* ContentView.swift */,
