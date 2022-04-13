@@ -21,7 +21,6 @@ struct UserPageView: View {
     let ImageDimension = (UIScreen.main.bounds.width-40) / 3
     
     var body: some View {
-        
         ZStack{
             
             //임시로 user 지정
@@ -36,9 +35,10 @@ struct UserPageView: View {
             
             
             ScrollView{
-                //name, info, grid
                 
+                //name, info, grid
                 VStack(alignment: .leading){
+                    
                     
                     HStack{
                         Spacer()
@@ -56,7 +56,7 @@ struct UserPageView: View {
                         Spacer()
                         LikeHeart()
                         
-                    }//userimage, username, heart
+                    }//profileimage, username, heart
                     .padding(5)
                     
                     HStack{
@@ -74,25 +74,7 @@ struct UserPageView: View {
                                 .clipShape(Capsule())
                         }
                         
-                       /*
-                        Text(uuser[0].talents[0])
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .font(.subheadline)
-                            .padding(.vertical, 7.0)
-                            .padding(.horizontal, 15.0)
-                            .background(Color("color_primary"))
-                            .clipShape(Capsule())
-                        
-                        Text("칭찬셔틀")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .font(.subheadline)
-                            .padding(.vertical, 7.0)
-                            .padding(.horizontal, 15.0)
-                            .background(Color("color_primary"))
-                            .clipShape(Capsule())
-                        */
+
                         
                     } //talent button
                     Spacer()
@@ -101,7 +83,6 @@ struct UserPageView: View {
                     LazyVGrid(columns: columns,
                               spacing: 6,
                               pinnedViews: [.sectionHeaders]
-                              
                     ){
                         
                         
@@ -112,7 +93,6 @@ struct UserPageView: View {
                                     .scaledToFill()
                                     .frame(width: ImageDimension, height: ImageDimension)
                                     .cornerRadius(20)
-                                //     .border(Color.white)
                                     .clipped()
                             }
                             
@@ -120,17 +100,28 @@ struct UserPageView: View {
                         }
                         
                         
+                        // 카드가 충분하지 않아서 발표때 보여지는 것을 위해 다른사람 취미사진까지 보여줌. 필요시 수정가능
+                        ForEach (0..<ccard.count){ index in
+                            ccard[ccard.count-index-1].image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: ImageDimension, height: ImageDimension)
+                                .cornerRadius(20)
+                                .clipped()
+                        }
+                        
+                        
+                        
+                        /*
                         ForEach (0..<50, id: \.self){
                             index in Image("personal")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: ImageDimension, height: ImageDimension)
                                 .cornerRadius(20)
-                            //     .border(Color.white)
                                 .clipped()
-                            
-                            
                         }
+                        */
                         
                         
                     }
