@@ -129,7 +129,7 @@ struct MyDetailView: View {
                     RoundedRectangle(cornerRadius: 0, style: .continuous)
                         .matchedGeometryEffect(id: "shape", in: namespace)
                 )
-                .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
+                .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 5)
                 
                 
                 Spacer()
