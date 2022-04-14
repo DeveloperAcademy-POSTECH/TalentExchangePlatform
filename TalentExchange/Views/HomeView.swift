@@ -14,19 +14,11 @@ import SwiftUI
 struct Photos {
     static let imageNames = [
         
-        "취미1",
-        "취미5",
-        "취미6",
-        "취미7",
-        "취미8",
-        "취미9",
-        "취미10",
-        "취미11",
-        "취미12",
-        "취미13",
-        "취미14",
-        "취미15",
-        "취미16"
+        "avery",
+        "grizzly",
+        "ground",
+        "jay",
+        "sony"
     ]
 }
 
