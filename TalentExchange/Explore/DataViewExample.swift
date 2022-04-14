@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ExploreRow: View {
+    
     @EnvironmentObject var modelData: ModelData
     
     var user: User
@@ -29,18 +30,17 @@ struct ExploreRow: View {
             
         }
     }
-    
 }
 
 struct ExploreRow_Previews: PreviewProvider {
     
-    static var users = ModelData().users
-    static var cards = ModelData().cards
+    static var users = ModelData().users //user : [ [user1],[user2],[user3],[user4] ]
+    static var cards = ModelData().cards //cards : [ [card1],[card2],[card3],[card4] ]
     
     static var previews: some View {
         Group{
-            ExploreRow(user: users[1], card: cards[1])
-            ExploreRow(user: users[2], card: cards[2])
+            ExploreRow(user: users[1], card: cards[1]) //user2
+            ExploreRow(user: users[2], card: cards[2]) //user3
             // 한 사용자에 여러개의 카드가 있다면 어떻게 불러올 것인가...?
             // 1. 사용자 아이디 획득
             // 2. 사용자 id에 맞는 사진 넣는 곳
