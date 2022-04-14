@@ -39,7 +39,6 @@ struct TalentExchangeApp: App {
                 TabView(selection: $router.screen){ // 라우터의 현재 value에 맞춰 스크린 변함
                     
                     HomeView()
-                        .badge(10) // => alert 개수 `control
                         .tag(Screen.home)
                         .environmentObject(router)
                         .environmentObject(modelData)
@@ -54,6 +53,7 @@ struct TalentExchangeApp: App {
                             Label("Explore", systemImage: "magnifyingglass")
                         }
                     ChatView()
+                        .badge(10) // => alert 개수 `control
                         .tag(Screen.chat)
                         .environmentObject(router)
                         .environmentObject(modelData)
@@ -70,6 +70,9 @@ struct TalentExchangeApp: App {
                     
                 }// TabView
                 .accentColor(Color("color_primary"))
+                .onAppear() {
+                            UITabBar.appearance().barTintColor = .white
+                        }
             }
             
         }

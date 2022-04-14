@@ -13,11 +13,19 @@ import SwiftUI
 //변수 이름을 photos 로 두었는데 나중에 어떻게 바뀔지에 따라서 바뀌어야 하는 부분.
 struct Photos {
     static let imageNames = [
-        "avery",
-        "grizzly",
-        "ground",
-        "jay",
-        "sony"
+        "취미7",
+        "취미9",
+        "취미11",
+        "취미13",
+        "취미15",
+        "취미16",
+        "취미14",
+        "취미12",
+        "취미10",
+        "취미8",
+        "취미6",
+        "취미4",
+        "취미2", 
     ]
 }
 
@@ -90,7 +98,7 @@ struct HomeCardView: View{
                 .bold()
                 .padding(.leading, 20)
              
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(Photos.imageNames.indices) { index in
                         VStack(alignment: .trailing) {
@@ -107,7 +115,8 @@ struct HomeCardView: View{
         }
         .padding(.top, -100)
         .foregroundColor(Color.white)
-        .background(Color.white)
+//        .background(Color.grayF4)
+//        .background(Color.white)
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .center)
     }
 }
@@ -138,34 +147,43 @@ struct interestBackGround: View {
                             .resizable()
                             .cornerRadius(12)
                             .frame(width: (UIScreen.main.bounds.width-48)/3*2, height: (UIScreen.main.bounds.width-48)/3*2, alignment: .leading)
+//                            .background(Color.grayF4)
                         VStack(){
                             Image(Photos.imageNames[1])
                                 .resizable()
                                 .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3, alignment: .leading)
+//                                .background(Color.grayF4)
                                 .cornerRadius(12)
                             
                             Image(Photos.imageNames[2])
                                 .resizable()
                                 .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3, alignment: .leading)
+//                                .background(Color.grayF4)
                                 .cornerRadius(12)
                         }
                     }
+                    .padding(.bottom, 50)
                     
                     LazyVGrid(columns: columns){
                         ForEach(Photos.imageNames.indices) { index in
                             VStack(alignment: .trailing) {
-                                Image(Photos.imageNames[index])
-                                    .resizable()
-                                    .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3)
-                                    .cornerRadius(12)
-                                Spacer().frame(width: 20 , height: 10)
-                                
+                                if(index > 2){
+                                    Image(Photos.imageNames[index])
+                                        .resizable()
+    //                                    .background(Color.grayF4)
+                                        .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3)
+                                        .cornerRadius(12)
+                                    Spacer().frame(width: 20 , height: 10)
+                                }
+
                             }
                         }
                     }
-                    .padding(.top, 30)
+//                    .padding(.top, 50)
+                    .padding(EdgeInsets(top: 150, leading:0, bottom: 150, trailing: 0))
                     .frame(width: (UIScreen.main.bounds.width-48), height: (UIScreen.main.bounds.width-60))
                 }
+                Spacer()
             }
         }//scrollview
         

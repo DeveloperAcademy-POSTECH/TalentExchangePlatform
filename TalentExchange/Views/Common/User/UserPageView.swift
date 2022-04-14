@@ -45,11 +45,11 @@ struct UserPageView: View {
                             .frame(width: 0.0, height: 0.0)
                         thisuser.image
                          .resizable()
-                         .frame(width: 70, height: 70)
+                         .frame(width: 60, height: 60)
                          .padding(.top)
                  
                         Text(thisuser.username)
-                            .font(.largeTitle)
+                            .font(.title)
                             .fontWeight(.semibold)
                             .padding(.top)
                  

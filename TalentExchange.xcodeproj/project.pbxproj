@@ -41,6 +41,7 @@
 		A7911E062803C69400F5F300 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E052803C69400F5F300 /* Card.swift */; };
 		A7911E0A28046BB900F5F300 /* asher.png in Resources */ = {isa = PBXBuildFile; fileRef = A7911E0928046BB900F5F300 /* asher.png */; };
 		A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7911E0B28047F7A00F5F300 /* MyDetailView.swift */; };
+		A7A8F7462808120B000E1A07 /* ColorExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A8F7452808120B000E1A07 /* ColorExtenstion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		A7911E052803C69400F5F300 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A7911E0928046BB900F5F300 /* asher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asher.png; sourceTree = "<group>"; };
 		A7911E0B28047F7A00F5F300 /* MyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailView.swift; sourceTree = "<group>"; };
+		A7A8F7452808120B000E1A07 /* ColorExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtenstion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 		A790182E27FFD20100D1E316 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A7A8F744280811FF000E1A07 /* Util */,
 				A790182F27FFD21F00D1E316 /* Components */,
 				450DAF4928048C00003A8886 /* User */,
 				A72C83462807BED900D3DB7B /* Card */,
@@ -254,6 +257,14 @@
 				80858BCD923B97938F7E15C8 /* MyPageView.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		A7A8F744280811FF000E1A07 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A7A8F7452808120B000E1A07 /* ColorExtenstion.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A8F7462808120B000E1A07 /* ColorExtenstion.swift in Sources */,
 				A7911DFA2803ABE900F5F300 /* User.swift in Sources */,
 				A7911E0C28047F7A00F5F300 /* MyDetailView.swift in Sources */,
 				A790180427FDF26500D1E316 /* HomeView.swift in Sources */,

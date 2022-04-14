@@ -52,11 +52,11 @@ struct CardDetailView: View {
                             Spacer()
                         }.padding(EdgeInsets(top: 7, leading: 20, bottom: 7, trailing: 20))
                         HStack{
-                        Image(decorative: "sony")
+                        Image(decorative: "sohni")
                             .resizable()
                             .frame(width: 50, height: 50)
                             .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 0))
-                        Text("Sony")
+                        Text("Sohni")
                             .fontWeight(.semibold)
                         Text("사진장인")
                             .fontWeight(.bold)
@@ -95,7 +95,7 @@ struct CardDetailView: View {
                             ///*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/ here
                         }
                         .padding(EdgeInsets(top: 7, leading:20, bottom: 7, trailing: 20))
-                        .background(Color("color_tertiary"))
+                        .background(Color("color_primary"))
                         .foregroundColor(.white)
                         .clipShape(Capsule())
                         .padding(.horizontal, 20)

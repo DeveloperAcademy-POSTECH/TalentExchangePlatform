@@ -37,6 +37,39 @@ struct ResultView: View {
                 
                 VStack{
 //                    Text("탐색 검색어 목록")
+                    
+                    HStack(){
+                        Text("거리순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(.white)
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color("color_primary"))
+                                .clipShape(Capsule())
+                        Text("관련도순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(Color("color_primary"))
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color.grayF4)
+                                .clipShape(Capsule())
+                        Text("인기많은순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(Color("color_primary"))
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color.grayF4)
+                                .clipShape(Capsule())
+                    }//HStack end.
+                    
+                    
+                    /* 탐색검색서
                     ScrollView (.horizontal, showsIndicators: false) {
                              HStack(alignment:.top){
                                  ForEach(0..<ccard.count, id:\.self) { s in
@@ -56,6 +89,7 @@ struct ResultView: View {
                                  .padding(.vertical)
                              }//HStack end.
                          }//ScrollView end.
+                     */
 
                     
 //                    Text("랜덤으로 탐색")
@@ -122,8 +156,9 @@ struct ResultView: View {
             var searchUID: [Int] = getuid(it: ccard, number: searchID) // uid:3 => id: 5, 6, 7, 8
 
             
-            NavigationView{
+            VStack{
                 
+                /*
                 VStack{
                     Image("search")
                         .frame(width: 20, height: 20, alignment: .center)
@@ -134,7 +169,45 @@ struct ResultView: View {
                     ResultProfileView(numberid:searchUID,numberuid:searchID)
                     } // NavigationLink End.
                 } // List end.
+                */
+            
+                if(searchData == "") {
+                                    VStack{
+//                                        Image(systemName: "magnifyingglass.circle")
+//                                            .resizable()
+//                                            .frame(width: 100, height: 100, alignment: .center)
+//                                            .padding()
+                                        
+                                        Spacer()
+                                        
+                                        VStack{
+                                            Image("search_id")
+                                                .resizable()
+                                                .frame(width: 200, height: 200, alignment: .center)
+//                                                .padding()
+   
+                                            Text("사용자ID를 입력해주세요")
+                                                .fontWeight(.bold)
+                                                .foregroundColor(Color.darkgray)
+                                        }
+                                        
+                                        Spacer()
+                                    }
+                    
             } // NavigationView end.
+                else{
+
+                                   List((getusernames(it:uuser)).filter({"\($0)".contains(searchData) && ($0 == searchData)}), id : \.self){ i in
+                                       
+//                                       NavigationLink(destination:Text(i)) {
+                                           ResultProfileView(numberid:searchUID,numberuid:searchID)
+                                           //i 에는 해당 username이 들어가게 됨
+//                                       } // NavigationLink End.
+                                       
+                                   } // List end.
+                               }// else(searchData == "") end.
+                           }// NavigationView end.
+        
         }
     } // body some View end.
 } //struct ResultView end.-

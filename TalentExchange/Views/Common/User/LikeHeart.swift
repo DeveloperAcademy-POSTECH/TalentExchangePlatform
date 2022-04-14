@@ -41,7 +41,7 @@ struct LikeHeart: View {
                 .foregroundColor(.red)
         }
         .font(.title)
-        .padding([.top, .trailing], 20)
+        .padding(EdgeInsets(top: 40, leading: 0, bottom: 5, trailing: 5))
         .scaleEffect(animate ? animationScale: 1)
         .animation(.easeIn(duration: duration), value: offset)
         .animation(.easeIn(duration: duration))
