@@ -126,6 +126,7 @@
 		9EBAA4E22804215E00B853FA /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				A7911DFE2803C29000F5F300 /* DataViewExample.swift */,
 				9EBAA4E32804215E00B853FA /* ExploreView.swift */,
 				9EBAA4E62804215E00B853FA /* SearchFieldView.swift */,
 				9EBAA4E42804215E00B853FA /* PickerView.swift */,
@@ -139,7 +140,6 @@
 		9EBAA4E72804215E00B853FA /* ExploreDetail */ = {
 			isa = PBXGroup;
 			children = (
-				9EBAA4E82804215E00B853FA /* ResultProfileView.swift */,
 			);
 			path = ExploreDetail;
 			sourceTree = "<group>";
@@ -200,10 +200,10 @@
 			children = (
 				A790182E27FFD20100D1E316 /* Common */,
 				A7911E082804223600F5F300 /* MyPage */,
-				A7911DFE2803C29000F5F300 /* DataViewExample.swift */,
 				4DE1487927FED13D00DB64F1 /* Chat */,
 				9EBAA4E22804215E00B853FA /* Explore */,
 				A790180327FDF26500D1E316 /* HomeView.swift */,
+				9EBAA4E82804215E00B853FA /* ResultProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
