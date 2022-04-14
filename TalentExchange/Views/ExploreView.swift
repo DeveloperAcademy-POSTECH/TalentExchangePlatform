@@ -12,7 +12,7 @@ struct ExploreView: View {
     @EnvironmentObject var router: TabRouter
     
     var body: some View {
-        Text("Explore")
+        Text("Hello World")
         
         /*
          Screen Router 활용예시 : explore 로 가는 버튼을 구현하는 경우

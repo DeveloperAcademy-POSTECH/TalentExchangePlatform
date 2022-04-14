@@ -1,0 +1,83 @@
+
+[
+    {
+        "id": 1,
+        "cardName": "mybehance",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "mybehance",
+        "talents": "디자인",
+        "contents": "제 behance입니다!",
+        "timestamp": "2022-04-11"
+    },
+    {
+        "id": 2,
+        "cardName": "photo",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "photo",
+        "talents": "사진",
+        "contents": "사진이쁘죠><",
+        "timestamp": "2022-04-09"
+    },
+    {
+        "id": 3,
+        "cardName": "driving",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "driving",
+        "talents": "드라이빙",
+        "contents": "yessss",
+        "timestamp": "2022-04-05"
+    },
+    {
+        "id": 4,
+        "cardName": "travel",
+        "uid": 2,
+        "username": "avery",
+        "cardImage": "travel",
+        "talents": "여행",
+        "contents": "팁공유해요",
+        "timestamp": "2022-04-09"
+    },
+    {
+        "id": 5,
+        "cardName": "취미1",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미1",
+        "talents": "원피스",
+        "contents": "피스피스원피스",
+        "timestamp": "2022-03-03"
+    },
+    {
+        "id": 6,
+        "cardName": "취미2",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미2",
+        "talents": "원피스",
+        "contents": "피스피스투피스",
+        "timestamp": "2022-03-05"
+    },
+    {
+        "id": 7,
+        "cardName": "취미3",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미3",
+        "talents": "원피스",
+        "contents": "피스피스쓰리피스",
+        "timestamp": "2022-04-05"
+    },
+    {
+        "id": 8,
+        "cardName": "취미4",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미4",
+        "talents": "원피스",
+        "contents": "피스피스뽀피스",
+        "timestamp": "2022-04-09"
+    }
+]

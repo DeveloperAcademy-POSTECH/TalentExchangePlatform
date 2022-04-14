@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ChatView: View {
     
@@ -39,7 +40,7 @@ struct ChatView: View {
                 ScrollView(showsIndicators: false){
                     VStack(alignment: .leading, spacing: 5){
                         
-                        SearchView(searchText: $searchText)
+                        SearchView(searchText: $searchText).padding(.bottom, -20)
                         
                         OnlineUsersView(users: users)
                        
