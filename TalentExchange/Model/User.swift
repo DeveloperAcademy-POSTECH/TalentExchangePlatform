@@ -10,7 +10,6 @@ import SwiftUI
 
 struct User: Hashable, Codable, Identifiable {
     
-    
     var id: Int
     var username: String
     var password: String
