@@ -177,44 +177,6 @@ struct LoginView: View {
       //      self.persistImageToStorage()
         }
     }
-//    private func persistImageToStorage() {
-////        let filename = UUID().uuidString
-//        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
-//        let ref = FirebaseManager.shared.storage.reference(withPath: uid)
-//        guard let imageData = self.image?.jpegData(compressionQuality: 0.5) else { return }
-//        ref.putData(imageData, metadata: nil) { metadata, err in
-//            if let err = err {
-//                self.loginStatusMessage = "Failed to push image to Storage: \(err)"
-//                return
-//            }
-//
-//            ref.downloadURL { url, err in
-//                if let err = err {
-//                    self.loginStatusMessage = "Failed to retrieve downloadURL: \(err)"
-//                    return
-//                }
-//
-//                self.loginStatusMessage = "Successfully stored image with url: \(url?.absoluteString ?? "")"
-//                print(url?.absoluteString)
-//                guard let url = url else { return }
-//                self.storeUserInformation(imageProfileUrl: url)
-//            }
-//        }
-//    }
-//    private func storeUserInformation(imageProfileUrl: URL) {
-//        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
-//        let userData = ["email": self.email, "uid": uid, "profileImageUrl": imageProfileUrl.absoluteString]
-//        FirebaseManager.shared.firestore.collection("users")
-//            .document(uid).setData(userData) { err in
-//                if let err = err {
-//                    print(err)
-//                    self.loginStatusMessage = "\(err)"
-//                    return
-//                }
-//
-//                print("Success")
-//            }
-//    }
 }
 
 struct LoginView_Previews: PreviewProvider {
