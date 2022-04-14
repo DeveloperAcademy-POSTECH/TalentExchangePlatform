@@ -19,27 +19,48 @@ struct ResultProfileView: View {
     
     var body: some View {
         HStack {
+            
             VStack{
-                Text("\(getusername(number: numberuid))")//계정이름
-                CircleProfile(userImage:getusername(number:numberuid))
-                    .background(.white)
-                    .frame(width: 80, height: 80)
+                HStack{
+                    Text("\(getusername(number: numberuid))")//계정이름
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+//                .padding(.bottom, -20)
+                .padding(EdgeInsets(top: 10, leading: 5, bottom: -20, trailing: 0))
+                    
+                HStack{
+                    Image(getusername(number:numberuid))
+                        .resizable()
+                        .background( Color("color_bg_inverted").opacity(0.05))
+                        .frame(width: 55, height: 55)
+                        .clipShape(Circle())
+
+                    //ScrollView를 활용하여 해당 계정의 사진들
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 10){
+                            ForEach(numberid, id: \.self){ s in
+                                ccard[s-1].image
+                                    .resizable()
+                                    .background( Color("color_bg_inverted").opacity(0.05))
+                                    .frame(width: 65, height: 65)
+                                    .cornerRadius(15)
+                                    
+                                }
+                        }
+                        .padding(.leading, 10)
+                    }
+                    .frame(height: 100)
+                    .padding(.trailing, 10)
+                }
+                
             }
             
-            //ScrollView를 활용하여 해당 계정의 사진들
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack(spacing: 10){
-                    ForEach(numberid, id: \.self){ s in
-                        ccard[s-1].image
-                            .resizable()
-                            .background( Color("color_bg_inverted").opacity(0.05))
-                            .frame(width: 80, height: 80)
-                        }
-                }
-                .padding(.leading, 10)
-            }
-            .frame(height: 100)
-            .padding(.trailing, 10)
+           
+           
+           
+            
+            
         }
     }
 }

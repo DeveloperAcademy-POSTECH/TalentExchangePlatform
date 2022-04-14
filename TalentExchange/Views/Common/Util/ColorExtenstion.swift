@@ -4,7 +4,9 @@ import SwiftUI
 
 extension Color {
  
-    static let grayF4 = Color(hex: "#F4F4F4")
+    static let grayF4 = Color(hex: "F4F4F4")
+    static let grayE5 = Color(hex: "e5e5e5")
+    static let darkgray = Color(hex: "2f2e41")
     static let ivory = Color(hex: "f8ede3")
     static let brown = Color(hex: "897853")  // #을 제거하고 사용해도 됩니다.
 }

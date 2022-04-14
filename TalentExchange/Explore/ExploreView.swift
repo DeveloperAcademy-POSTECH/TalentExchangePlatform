@@ -17,13 +17,12 @@ struct ExploreView: View {
     
     var body: some View {
         VStack{
-            UserPageView()
-//            SearchFieldView(searchData: $searchData)
-//                .padding(.horizontal)
-//
-//            PickerView(isProfile: $isProfile)
-//
-//            ResultView(searchData: $searchData, isProfile: $isProfile)
+            SearchFieldView(searchData: $searchData)
+                .padding(.horizontal)
+
+            PickerView(isProfile: $isProfile)
+
+            ResultView(searchData: $searchData, isProfile: $isProfile)
         }
     }
     
