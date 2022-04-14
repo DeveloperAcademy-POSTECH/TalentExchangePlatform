@@ -34,6 +34,8 @@ struct TalentExchangeApp: App {
     
     
     var body: some Scene {
+        
+        
         WindowGroup {
             ZStack{
                 TabView(selection: $router.screen){ // 라우터의 현재 value에 맞춰 스크린 변함

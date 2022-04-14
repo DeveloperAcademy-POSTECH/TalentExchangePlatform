@@ -16,7 +16,7 @@ struct CircleProfile : View {
         Image(userImage)
             .resizable()
             .background( Color("color_bg_inverted").opacity(0.05))
-            .frame(width: 80, height: 80)
+            .frame(width: 60, height: 60)
             .clipShape(Circle())
 
     }
