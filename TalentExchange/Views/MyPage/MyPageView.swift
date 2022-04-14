@@ -148,7 +148,7 @@ struct MyPageView: View {
 
                             // Card2
                         }// Scroll view
-                                .ignoresSafeArea()
+                             .ignoresSafeArea()
 //                        .frame(width: .infinity, height: 900, alignment: .bottom)
                     }
                             .padding(EdgeInsets(top: 43, leading: 24, bottom: 24, trailing: 24))

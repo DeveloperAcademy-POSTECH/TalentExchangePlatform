@@ -84,12 +84,10 @@ struct CardDetailView: View {
                                 .clipShape(Capsule())
                         
                             }
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet justo donec enim diamLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet justo donec enim diam  ")
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam libero justo laoreet sit amet cursus sit amet dictum. Egestas ")
                                 .padding()
                                 }
-                            }
-                    //Scroll View
-                    Spacer()
+                    
                     HStack(){
                             Spacer()
                         Button("채팅 시작")
@@ -105,6 +103,13 @@ struct CardDetailView: View {
                         
                         
                     }.padding()
+                    
+                    
+                    
+                            }
+                    //Scroll View
+                    Spacer()
+                    
                        
                     }//VStack
                 }// ZStack

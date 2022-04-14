@@ -28,34 +28,41 @@ struct ResultView: View {
             let columns = [
                 //추가 하면 할수록 화면에 보여지는 개수가 변함
                 GridItem(.flexible()),
-                GridItem(.flexible())
+                GridItem(.flexible()),
+//                GridItem(.flexible())
             ]
             //사용자가 아무런 입력을 하지 않았을 때의 화면
             if(searchData == ""){
                 var randomccard: [Card] = ccard.shuffled()
                 
                 VStack{
-                    Text("탐색 검색어 목록")
+//                    Text("탐색 검색어 목록")
                     ScrollView (.horizontal, showsIndicators: false) {
                              HStack(alignment:.top){
                                  ForEach(0..<ccard.count, id:\.self) { s in
-                                     Capsule()
-                                         .fill(Color.yellow)
-                                         .frame(width:80, height:30)
-                                         .overlay(
+//                                     Capsule()
+//                                         .fill(Color.purple)
+//                                         .frame(width:80, height:30)
+//                                         .overlay(Text("\(ccard[s].talents)"))
                                      Text("\(ccard[s].talents)")
-                                         )
+                                             .fontWeight(.bold)
+                                             .foregroundColor(.white)
+                                             .font(.caption)
+                                             .padding(.vertical, 7.0)
+                                             .padding(.horizontal, 10.0)
+                                             .background(Color("color_primary"))
+                                             .clipShape(Capsule())
                                  }//ForEach end.
                                  .padding(.vertical)
                              }//HStack end.
                          }//ScrollView end.
 
                     
-                    Text("랜덤으로 탐색")
-                        .frame(alignment:.center)
-                        .padding(10)
-                        .offset(y:-10)
-                    NavigationView{
+//                    Text("랜덤으로 탐색")
+//                        .frame(alignment:.center)
+//                        .padding(10)
+//                        .offset(y:-10)
+//                    NavigationView{
                         ScrollView(.vertical, showsIndicators:false) {
                             LazyVGrid(columns: columns,
                                       alignment: .center,
@@ -65,15 +72,16 @@ struct ResultView: View {
                                     NavigationLink(destination:Text("This is random image")) {
                                         randomccard[s].image
                                             .resizable()
-                                            .cornerRadius(10)
+                                            .scaledToFill()
                                             .frame(width:180,height:180)
+                                            .cornerRadius(10)
                                             .clipped()
                                     }//NavigationLink end.
                                 }//ForEach end.
                             })//LazyVGrid end.
                         }//ScrollView end.
-                        .offset(y:-100)
-                    }//NavigationView end.
+//                        .offset(y:-100)
+//                    }//NavigationView end.
                 }//VStack end.
                 .padding(5)
                 
@@ -86,11 +94,19 @@ struct ResultView: View {
                                   alignment: .center,
                                   spacing: 6,
                                   content: {
-                            ForEach(0..<searchImage.count, id:\.self) { s in NavigationLink(destination: Text("yes i can do")) { searchImage[s]
+                            ForEach(0..<searchImage.count, id:\.self) { s in NavigationLink(destination: Text("yes i can do")) {
+                                searchImage[s]
                                     .resizable()
                                     .cornerRadius(10)
                                     .frame(height:180)
                                     .padding(15)
+                                
+//                                searchImage[s]
+//                                    .resizable()
+//                                    .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3)
+//                                    .cornerRadius(12)
+//                                Spacer().frame(width: 20 , height: 10)
+                                
                                 } // NavigationLink end.
                             } // ForEach end.
                         }) // LazyVGrid end.
@@ -107,6 +123,12 @@ struct ResultView: View {
 
             
             NavigationView{
+                
+                VStack{
+                    Image("search")
+                        .frame(width: 20, height: 20, alignment: .center)
+                    Text("ID를 검색해주세요!")
+                }
                 List((getusernames(it:uuser)).filter({"\($0)".contains(searchData) && ($0 == searchData)}), id : \.self){ i in
                     NavigationLink(destination:Text(i)) {
                     ResultProfileView(numberid:searchUID,numberuid:searchID)
@@ -115,7 +137,7 @@ struct ResultView: View {
             } // NavigationView end.
         }
     } // body some View end.
-} //struct ResultView end.
+} //struct ResultView end.-
 
 func getid(it: [User], name: String) -> Int {
     var result: Int = 0
@@ -160,3 +182,4 @@ func getusernames(it: [User]) -> [String] {
     
     return result
 }
+

@@ -15,7 +15,6 @@ struct SearchFieldView: View {
     var body: some View {
         VStack{
             HStack {
-                Image(systemName: "magnifyingglass")
                     
                 TextField("탐색하거나 프로필 검색하세요", text: $searchData)
                         .foregroundColor(.primary)

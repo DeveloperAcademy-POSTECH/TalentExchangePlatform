@@ -18,6 +18,6 @@ struct PickerView: View {
             Text("프로필").tag(Submenu.Profile.rawValue)
         }
         .pickerStyle(SegmentedPickerStyle())
-        .padding(.horizontal, 150)
+        .padding(.horizontal, 30)
     }
 }
