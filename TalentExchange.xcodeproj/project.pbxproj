@@ -17,7 +17,7 @@
 		4DE1487D27FED72B00DB64F1 /* OnlineUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */; };
 		4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1487E27FED74D00DB64F1 /* Chatitem.swift */; };
 		4DEADE8328048F5800AE2CFC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEADE8228048F5800AE2CFC /* ImagePicker.swift */; };
-		69FEEB612804136300421AD1 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEEB602804136300421AD1 /* DetailPage.swift */; };
+		69FEEB612804136300421AD1 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FEEB602804136300421AD1 /* CardDetailView.swift */; };
 		808589B7ABFAF8AD09D72A7F /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80858BCD923B97938F7E15C8 /* MyPageView.swift */; };
 		A737B9D1280555400066EF71 /* MyDetailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737B9D0280555400066EF71 /* MyDetailCardView.swift */; };
 		A79017F427FDEF0B00D1E316 /* TalentExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79017F327FDEF0B00D1E316 /* TalentExchangeApp.swift */; };
@@ -48,7 +48,7 @@
 		4DE1487C27FED72B00DB64F1 /* OnlineUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineUserView.swift; sourceTree = "<group>"; };
 		4DE1487E27FED74D00DB64F1 /* Chatitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatitem.swift; sourceTree = "<group>"; };
 		4DEADE8228048F5800AE2CFC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		69FEEB602804136300421AD1 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		69FEEB602804136300421AD1 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		80858BCD923B97938F7E15C8 /* MyPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		A737B9D0280555400066EF71 /* MyDetailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailCardView.swift; sourceTree = "<group>"; };
 		A79017F027FDEF0B00D1E316 /* TalentExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalentExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,13 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		450DAF4928048C00003A8886 /* UserPage */ = {
+		450DAF4928048C00003A8886 /* User */ = {
 			isa = PBXGroup;
 			children = (
 				450DAF442803E0E4003A8886 /* UserPageView.swift */,
 				450DAF4628048BE7003A8886 /* LikeHeart.swift */,
 			);
-			path = UserPage;
+			path = User;
 			sourceTree = "<group>";
 		};
 		4D893C582803CCF10059565F /* Login */ = {
@@ -113,6 +113,14 @@
 				4DE1487E27FED74D00DB64F1 /* Chatitem.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		A72C83462807BED900D3DB7B /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				69FEEB602804136300421AD1 /* CardDetailView.swift */,
+			);
+			path = Card;
 			sourceTree = "<group>";
 		};
 		A79017E727FDEF0B00D1E316 = {
@@ -162,13 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				A790182E27FFD20100D1E316 /* Common */,
+				4DE1487927FED13D00DB64F1 /* Chat */,
 				A7911E082804223600F5F300 /* MyPage */,
 				A7911DFE2803C29000F5F300 /* DataViewExample.swift */,
 				A790180627FDF2B100D1E316 /* ExploreView.swift */,
-				450DAF4928048C00003A8886 /* UserPage */,
 				A790180327FDF26500D1E316 /* HomeView.swift */,
-				4DE1487927FED13D00DB64F1 /* Chat */,
-				69FEEB602804136300421AD1 /* DetailPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				A790182F27FFD21F00D1E316 /* Components */,
+				450DAF4928048C00003A8886 /* User */,
+				A72C83462807BED900D3DB7B /* Card */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -268,7 +276,7 @@
 			);
 			mainGroup = A79017E727FDEF0B00D1E316;
 			packageReferences = (
-				4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A79017F127FDEF0B00D1E316 /* Products */;
 			projectDirPath = "";
@@ -307,7 +315,7 @@
 				4DE1487F27FED74D00DB64F1 /* Chatitem.swift in Sources */,
 				A737B9D1280555400066EF71 /* MyDetailCardView.swift in Sources */,
 				A79017F627FDEF0B00D1E316 /* ContentView.swift in Sources */,
-				69FEEB612804136300421AD1 /* DetailPage.swift in Sources */,
+				69FEEB612804136300421AD1 /* CardDetailView.swift in Sources */,
 				A790180927FDF2C200D1E316 /* ChatView.swift in Sources */,
 				450DAF452803E0E4003A8886 /* UserPageView.swift in Sources */,
 				4DE1487B27FED6E000DB64F1 /* SearchView.swift in Sources */,
@@ -524,7 +532,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -537,12 +545,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		4D893C4E280261260059565F /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		4D893C50280261260059565F /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 4D893C4D280261260059565F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct DetailPage: View {
+struct CardDetailView: View {
     
     @EnvironmentObject var router: TabRouter
     
@@ -112,9 +112,9 @@ struct DetailPage: View {
         }
 }
 
-struct DetailPage_Previews: PreviewProvider {
+struct CardDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailPage()
+        CardDetailView()
             .environmentObject(TabRouter())
         }
 }
