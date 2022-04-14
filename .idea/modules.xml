@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TalentExchangePlatform.iml" filepath="$PROJECT_DIR$/.idea/TalentExchangePlatform.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/100g.iml" filepath="$PROJECT_DIR$/.idea/100g.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TalentExchangePlatform.iml" filepath="$PROJECT_DIR$/.idea/TalentExchangePlatform.iml" />
     </modules>
   </component>
 </project>
