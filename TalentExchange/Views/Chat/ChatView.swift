@@ -12,6 +12,7 @@ struct ChatView: View {
     
     @EnvironmentObject var router: TabRouter
     @State var searchText: String = ""
+    @State var newChat = false
     
     let users = ["avery", "ground", "grizzly", "jay", "sony"]
     let messages = [
@@ -23,19 +24,33 @@ struct ChatView: View {
     
     
     var body: some View {
+        
         ZStack{
             Color("color_bg").edgesIgnoringSafeArea(.all)
             VStack{
                 
-               HStack{
+                HStack{
                     Text("Chat")
                         .fontWeight(.semibold)
                         .font(.largeTitle)
                     Spacer()
-                    Image(systemName: "square.and.pencil")
+                    
+                    //새로운 메시지 추가 시작
+                    
+                    Button{
+                        newChat.toggle()
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                    }
                         .foregroundColor(Color("color_primary"))
                         .font(.title2)
-              }
+                        .actionSheet(isPresented: $newChat) {
+                            .init(title: Text("새로운 대화 상대를 선택하세요"),
+                                  buttons: [.default(Text("asher"))
+                            ])
+                        }
+                        // 새로운 메시지 종료
+                }
                 
                 ScrollView(showsIndicators: false){
                     VStack(alignment: .leading, spacing: 5){

@@ -28,50 +28,42 @@ final class TabRouter: ObservableObject {
 
 @main
 struct TalentExchangeApp: App {
-    
-    @StateObject private var modelData = ModelData() //add ModelData
     @StateObject var router = TabRouter()
     
     
     var body: some Scene {
+        
+        
         WindowGroup {
-            ZStack{
-                TabView(selection: $router.screen){ // 라우터의 현재 value에 맞춰 스크린 변함
-                    
-                    HomeView()
-                        .badge(10) // => alert 개수 `control
-                        .tag(Screen.home)
-                        .environmentObject(router)
-                        .environmentObject(modelData)
-                        .tabItem{
-                            Label("Home", systemImage: "house")
-                        }
-                    ExploreView()
-                        .tag(Screen.explore)
-                        .environmentObject(router)
-                        .environmentObject(modelData)
-                        .tabItem{
-                            Label("Explore", systemImage: "magnifyingglass")
-                        }
-                    ChatView()
-                        .tag(Screen.chat)
-                        .environmentObject(router)
-                        .environmentObject(modelData)
-                        .tabItem{
-                            Label("Chat", systemImage: "message")
-                        }
-                    MyPageView()
-                        .tag(Screen.mypage)
-                        .environmentObject(router)
-                        .environmentObject(modelData)
-                        .tabItem{
-                            Label("Profile", systemImage: "person.crop.circle")
-                        }
-                    
-                }// TabView
-                .accentColor(Color("color_primary"))
-            }
             
+            TabView(selection: $router.screen){ // 라우터의 현재 value에 맞춰 스크린 변함
+                HomeView()
+//                    .badge(10) => alert 개수 `control
+                    .tag(Screen.home)
+                    .environmentObject(router)
+                    .tabItem{
+                        Label("Home", systemImage: "house")
+                    }
+                ExploreView()
+                    .tag(Screen.explore)
+                    .environmentObject(router)
+                    .tabItem{
+                        Label("Explore", systemImage: "magnifyingglass")
+                    }
+                ChatView()
+                    .tag(Screen.chat)
+                    .environmentObject(router)
+                    .tabItem{
+                        Label("Chat", systemImage: "message")
+                    }
+                MyPageView()
+                    .tag(Screen.mypage)
+                    .environmentObject(router)
+                    .tabItem{
+                        Label("Profile", systemImage: "person.crop.circle")
+                    }
+                
+            }
         }
     }
 }

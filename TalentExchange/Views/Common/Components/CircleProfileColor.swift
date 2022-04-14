@@ -15,8 +15,9 @@ struct CircleProfileColor: View {
         Image(userImage)
             .resizable()
             .background( Color("color_bg").opacity(0.1))
-            .frame(width: 80, height: 80)
+            .frame(width: 60, height: 60)
             .overlay(Circle().stroke(Color("color_primary"), lineWidth: 5))
             .clipShape(Circle())
+        
     }
 }
