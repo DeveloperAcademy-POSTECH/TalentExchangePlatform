@@ -13,11 +13,20 @@ import SwiftUI
 //변수 이름을 photos 로 두었는데 나중에 어떻게 바뀔지에 따라서 바뀌어야 하는 부분.
 struct Photos {
     static let imageNames = [
-        "avery",
-        "grizzly",
-        "ground",
-        "jay",
-        "sony"
+        
+        "취미1",
+        "취미5",
+        "취미6",
+        "취미7",
+        "취미8",
+        "취미9",
+        "취미10",
+        "취미11",
+        "취미12",
+        "취미13",
+        "취미14",
+        "취미15",
+        "취미16"
     ]
 }
 
