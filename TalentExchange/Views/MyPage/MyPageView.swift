@@ -140,12 +140,12 @@ struct MyPageView: View {
                             )
                             .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 5)
                             
-                            Image("my2")
+                            Image("share")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .padding(.top, 10)
                             
-                            Image("my3")
+                            Image("statics")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .padding(.top, 10)

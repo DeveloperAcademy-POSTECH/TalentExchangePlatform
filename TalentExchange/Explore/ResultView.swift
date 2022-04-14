@@ -37,6 +37,39 @@ struct ResultView: View {
                 
                 VStack{
 //                    Text("탐색 검색어 목록")
+                    
+                    HStack(){
+                        Text("거리순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(.white)
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color("color_primary"))
+                                .clipShape(Capsule())
+                        Text("관련도순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(Color("color_primary"))
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color.grayF4)
+                                .clipShape(Capsule())
+                        Text("인기많은순")
+                                .fontWeight(.bold)
+                                .frame(width: 60)
+                                .foregroundColor(Color("color_primary"))
+                                .font(.caption)
+                                .padding(.vertical, 8.0)
+                                .padding(.horizontal, 10.0)
+                                .background(Color.grayF4)
+                                .clipShape(Capsule())
+                    }//HStack end.
+                    
+                    
+                    /* 탐색검색서
                     ScrollView (.horizontal, showsIndicators: false) {
                              HStack(alignment:.top){
                                  ForEach(0..<ccard.count, id:\.self) { s in
@@ -56,6 +89,7 @@ struct ResultView: View {
                                  .padding(.vertical)
                              }//HStack end.
                          }//ScrollView end.
+                     */
 
                     
 //                    Text("랜덤으로 탐색")

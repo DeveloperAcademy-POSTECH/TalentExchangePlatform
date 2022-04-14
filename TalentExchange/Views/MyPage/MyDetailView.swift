@@ -182,7 +182,7 @@ struct MyDetailView: View {
                             VStack(alignment: .trailing) {
                                 Image(Talents.imageNames[index])
                                     .resizable()
-                                    .background(.gray)
+                                    .background(Color.grayF4)
                                     .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3)
                                     .cornerRadius(12)
                                 Spacer().frame(width: 20 , height: 10)

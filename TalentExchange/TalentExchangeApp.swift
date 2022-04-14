@@ -70,6 +70,9 @@ struct TalentExchangeApp: App {
                     
                 }// TabView
                 .accentColor(Color("color_primary"))
+                .onAppear() {
+                            UITabBar.appearance().barTintColor = .white
+                        }
             }
             
         }
