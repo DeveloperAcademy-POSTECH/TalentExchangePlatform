@@ -119,23 +119,32 @@ struct ResultView: View {
         //유저가 프로필 선택
         else {
             var searchID: Int = getid(it: uuser, name: searchData) // grizzly => id:3
-            var searchUID: [Int] = getuid(it: ccard, number: searchID) // uid:3 => id: 5, 6, 7, 8
+            var searchUID: [Int] = getuid(it: ccard, number: searchID) // uid:3 => id: 5, 6, 7, 8, 17
 
             
             NavigationView{
-                
-                VStack{
-                    Image("search")
-                        .frame(width: 20, height: 20, alignment: .center)
-                    Text("ID를 검색해주세요!")
+                if(searchData == "") {
+                    VStack{
+                        Image(systemName: "magnifyingglass.circle")
+                            .resizable()
+                            .frame(width: 100, height: 100, alignment: .center)
+                            .padding()
+                        Text("ID를 검색해주세요")
+                            .fontWeight(.black)
+                        Spacer()
+                    }
                 }
-                List((getusernames(it:uuser)).filter({"\($0)".contains(searchData) && ($0 == searchData)}), id : \.self){ i in
-                    NavigationLink(destination:Text(i)) {
-                    ResultProfileView(numberid:searchUID,numberuid:searchID)
-                    } // NavigationLink End.
-                } // List end.
-            } // NavigationView end.
-        }
+                else{
+                    
+                    List((getusernames(it:uuser)).filter({"\($0)".contains(searchData) && ($0 == searchData)}), id : \.self){ i in
+                        NavigationLink(destination:Text(i)) {
+                            ResultProfileView(numberid:searchUID,numberuid:searchID)
+                            //i 에는 해당 username이 들어가게 됨
+                        } // NavigationLink End.
+                    } // List end.
+                }// else(searchData == "") end.
+            }// NavigationView end.
+        } // else(유저가프로필선택하는경우) end.
     } // body some View end.
 } //struct ResultView end.-
 
