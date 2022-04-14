@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "cardName": "mybehance",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "mybehance",
+        "talents": "디자인",
+        "contents": "제 behance입니다!",
+        "timestamp": "2022-04-11"
+    },
+    {
+        "id": 2,
+        "cardName": "photo",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "photo",
+        "talents": "사진",
+        "contents": "사진이쁘죠><",
+        "timestamp": "2022-04-09"
+    },
+    {
+        "id": 3,
+        "cardName": "driving",
+        "uid": 1,
+        "username": "asher",
+        "cardImage": "driving",
+        "talents": "드라이빙",
+        "contents": "yessss",
+        "timestamp": "2022-04-05"
+    },
+    {
+        "id": 4,
+        "cardName": "travel",
+        "uid": 2,
+        "username": "avery",
+        "cardImage": "travel",
+        "talents": "여행",
+        "contents": "팁공유해요",
+        "timestamp": "2022-04-09"
+    },
+    {
+        "id": 5,
+        "cardName": "취미1",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미1",
+        "talents": "원피스",
+        "contents": "피스피스원피스",
+        "timestamp": "2022-03-03"
+    },
+    {
+        "id": 6,
+        "cardName": "취미2",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미2",
+        "talents": "원피스",
+        "contents": "피스피스투피스",
+        "timestamp": "2022-03-05"
+    },
+    {
+        "id": 7,
+        "cardName": "취미3",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미3",
+        "talents": "원피스",
+        "contents": "피스피스쓰리피스",
+        "timestamp": "2022-04-05"
+    },
+    {
+        "id": 8,
+        "cardName": "취미4",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미4",
+        "talents": "원피스",
+        "contents": "피스피스뽀피스",
+        "timestamp": "2022-04-09"
+    },
+    {
+        "id": 9,
+        "cardName": "취미5",
+        "uid": 4,
+        "username": "ground",
+        "cardImage": "취미5",
+        "talents": "사진",
+        "contents": "사진리어스",
+        "timestamp": "2021-02-09"
+    },
+    {
+        "id": 10,
+        "cardName": "취미6",
+        "uid": 6,
+        "username": "sohni",
+        "cardImage": "취미6",
+        "talents": "영어",
+        "contents": "나는야 영어마스터",
+        "timestamp": "2011-04-27"
+    },
+    {
+        "id": 11,
+        "cardName": "취미7",
+        "uid": 5,
+        "username": "jay",
+        "cardImage": "취미7",
+        "talents": "피아노",
+        "contents": "유럽의 거장이라 할 수 있죠",
+        "timestamp": "2022-02-19"
+    },
+    {
+        "id": 12,
+        "cardName": "취미8",
+        "uid": 7,
+        "username": "may",
+        "cardImage": "취미8",
+        "talents": "헬스",
+        "contents": "헬창이라 불러다오",
+        "timestamp": "2019-11-02"
+    },
+    {
+        "id": 13,
+        "cardName": "취미9",
+        "uid": 8,
+        "username": "jun",
+        "cardImage": "취미9",
+        "talents": "야구",
+        "contents": "대전토박이 한화팬입니다",
+        "timestamp": "2019-11-02"
+    },
+    {
+        "id": 14,
+        "cardName": "취미10",
+        "uid": 7,
+        "username": "may",
+        "cardImage": "취미10",
+        "talents": "반려견",
+        "contents": "인생의 절반을 반려견과 함께하고 있어요",
+        "timestamp": "2020-01-18"
+    },
+    {
+        "id": 15,
+        "cardName": "취미11",
+        "uid": 8,
+        "username": "jun",
+        "cardImage": "취미11",
+        "talents": "디자인",
+        "contents": "예술가가 되고싶은 평범한 사람",
+        "timestamp": "2022-03-17"
+    },
+    {
+        "id": 16,
+        "cardName": "취미12",
+        "uid": 9,
+        "username": "august",
+        "cardImage": "취미12",
+        "talents": "헬스",
+        "contents": "바벨과 사랑에 빠진지 어언 4년",
+        "timestamp": "2018-02-01"
+    },
+    {
+        "id": 17,
+        "cardName": "취미13",
+        "uid": 3,
+        "username": "grizzly",
+        "cardImage": "취미13",
+        "talents": "영어",
+        "contents": "제2외국어는 한글입니다",
+        "timestamp": "2006-07-02"
+    },
+    {
+        "id": 18,
+        "cardName": "취미14",
+        "uid": 8,
+        "username": "jun",
+        "cardImage": "취미14",
+        "talents": "여행",
+        "contents": "코로나 이전에는 매주 해외로 갔었죠",
+        "timestamp": "2019-11-09"
+    },
+    {
+        "id": 19,
+        "cardName": "취미15",
+        "uid": 2,
+        "username": "avery",
+        "cardImage": "취미15",
+        "talents": "여행",
+        "contents": "여행을 통해 즐거움을 얻어요",
+        "timestamp": "2019-11-09"
+    },
+    {
+        "id": 20,
+        "cardName": "취미16",
+        "uid": 4,
+        "username": "ground",
+        "cardImage": "취미16",
+        "talents": "여행",
+        "contents": "순간적인 낯섦을 느낄 수 있는 여행!",
+        "timestamp": "2019-11-09"
+    },
+]

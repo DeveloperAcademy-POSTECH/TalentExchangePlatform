@@ -39,7 +39,7 @@ struct LeadingNaviView: View{
     var body: some View{
         Text("BackGround")
             .bold()
-            .frame(width: 220, height: 70)
+            .frame(width: 200, height: 70)
             .font(.largeTitle)
 //            .font(.system(.largeTitle))
             .padding(.trailing, 80)
@@ -47,6 +47,27 @@ struct LeadingNaviView: View{
 }
 
 
+//위의 빨간색 원형 만드는 코드. 추후 notification 부분이 만들어지면서 바꿔질 수 있음.
+struct TapGestureView: View{
+    
+    @State var tapped = true
+    
+    var tap: some Gesture{
+        TapGesture(count: 1)
+            .onEnded { _ in self.tapped != self.tapped}
+    }
+    
+    var body: some View{
+        Circle()
+        //         .fill(self.tapped ? Color.blue : Color.red)
+            .frame(width: 10, height: 10, alignment: .center)
+            .foregroundColor(Color.red)
+            .opacity(self.tapped ? 1.0 : 0.0)
+            .padding(.top, -10)
+            .padding(.trailing, -10)
+            .gesture(tap)
+    }
+}
 //알림 기능.
 struct TrailingNavView: View{
     
@@ -56,9 +77,7 @@ struct TrailingNavView: View{
                 .resizable()
                 .scaledToFit()
                 .badge(10)
-                .padding()
-                .frame(width: 60, height: 60, alignment: .center)
-          
+                .padding()          
             Circle()
                 .frame(width: 10, height: 10, alignment: .center)
                 .foregroundColor(Color.red)
@@ -71,6 +90,105 @@ struct TrailingNavView: View{
 
 //가운데 횡스크롤 뷰.
 struct HomeCardView: View{
+    var body: some View{
+        VStack(alignment: .leading){
+            Text("내 근처 백그라운드 ")
+                .foregroundColor(Color.black)
+                .font(.system(.title2, design: .rounded))
+                .bold()
+                .padding(.leading, 20)
+             
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(Photos.imageNames.indices) { index in
+                        VStack(alignment: .trailing) {
+                            Image(Photos.imageNames[index])
+                                .resizable()
+                                .frame(width: 150, height: 150, alignment: .trailing)
+                                .cornerRadius(12)
+                        }
+                    }
+                }
+            }
+            .padding(20)
+            //listview 자리..padding(20)
+        }
+        .padding(.top, -100)
+        .foregroundColor(Color.white)
+        .background(Color.white)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .center)
+    }
+}
+
+
+//밑의 그리드에 관련된 뷰.
+struct interestBackGround: View {
+    
+    var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
+    private var fixedLayout = [GridItem(.fixed(120)), GridItem(.fixed(100))]
+    
+    var body: some View {
+        //into의 숫자만큼 grid개수가 정해짐
+        
+        VStack() {
+            //제일 처음에는 글자 나오는 텍스트 필요.
+            VStack(alignment: .leading){
+                Text("나의 관심 백그라운드")
+                    .bold()
+                    .foregroundColor(Color.black)
+                    .frame(width: 200, height: 50, alignment: .center)
+                    .font(.system(.title2, design: .rounded))
+                    
+                //첫번째 부분의 1개의 사진이 큰 부분과 옆의 2부분은 따로 vstack 안에 hstack을 만들어서 구현했음.
+                VStack {
+                    HStack(){
+                        Image(Photos.imageNames[0])
+                            .resizable()
+                            .cornerRadius(12)
+                            .frame(width: (UIScreen.main.bounds.width-48)/3*2, height: (UIScreen.main.bounds.width-48)/3*2, alignment: .leading)
+                        VStack(){
+                            Image(Photos.imageNames[1])
+                                .resizable()
+                                .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3, alignment: .leading)
+                                .cornerRadius(12)
+                            
+                            Image(Photos.imageNames[2])
+                                .resizable()
+                                .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3, alignment: .leading)
+                                .cornerRadius(12)
+                        }
+                    }
+                    
+                    LazyVGrid(columns: columns){
+                        ForEach(Photos.imageNames.indices) { index in
+                            VStack(alignment: .trailing) {
+                                Image(Photos.imageNames[index])
+                                    .resizable()
+                                    .frame(width: (UIScreen.main.bounds.width-48)/3, height: (UIScreen.main.bounds.width-60)/3)
+                                    .cornerRadius(12)
+                                Spacer().frame(width: 20 , height: 10)
+                                
+                            }
+                        }
+                    }
+                    .padding(.top, 30)
+                    .frame(width: (UIScreen.main.bounds.width-48), height: (UIScreen.main.bounds.width-60))
+                }
+            }
+        }//scrollview
+        
+        .padding()
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width, alignment: .center)
+    }
+}
+
+
+
+
+
+
+
+struct HomeView: View {
     
     var body: some View{
         VStack(alignment: .leading){

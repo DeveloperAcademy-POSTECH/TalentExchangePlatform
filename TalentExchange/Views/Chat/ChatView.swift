@@ -29,7 +29,7 @@ struct ChatView: View {
             Color("color_bg").edgesIgnoringSafeArea(.all)
             VStack{
                 
-                HStack{
+               HStack{
                     Text("Chat")
                         .fontWeight(.semibold)
                         .font(.largeTitle)
@@ -50,8 +50,7 @@ struct ChatView: View {
                             ])
                         }
                         // 새로운 메시지 종료
-                }
-                
+                }                
                 ScrollView(showsIndicators: false){
                     VStack(alignment: .leading, spacing: 5){
                         
